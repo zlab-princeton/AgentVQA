@@ -2,7 +2,7 @@
   <a href="https://openreview.net/pdf?id=MQinK5xoYM">
     <img alt="Paper URL" src="https://img.shields.io/static/v1?label=Paper&amp;message=PDF&amp;color=B31B1B">
   </a>
-  <a href="https://huggingface.co/datasets/AgentVQA/AgentVQA">
+  <a href="https://huggingface.co/datasets/zlab-princeton/AgentVQA">
     <img alt="AgentVQA Dataset" src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20HF&amp;message=Dataset&amp;color=F4C430">
   </a>
   <a href="https://zlab-princeton.github.io/AgentVQA/">
