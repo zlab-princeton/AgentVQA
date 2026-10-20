@@ -30,7 +30,7 @@ AgentVQA contains **1,000 manually verified multiple-choice questions** from **2
   <a href="assets/distribution.png"><img src="assets/distribution.png" width="100%" alt="Distribution of 1,000 questions across 23 source datasets. Web Agents and Games have four subsets of 50 questions each; Egocentric Videos, Robotics, and Spatial Planning have five subsets of 40 questions each."></a>
 </p>
 
-The dataset and media are available on [Hugging Face](https://huggingface.co/datasets/AgentVQA/AgentVQA).
+The dataset and media are available on [Hugging Face](https://huggingface.co/datasets/zlab-princeton/AgentVQA).
 
 ## Dataset Curation
 
