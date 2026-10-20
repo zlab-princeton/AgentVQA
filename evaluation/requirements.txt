@@ -1,0 +1,10 @@
+lmms_eval @ git+https://github.com/EvolvingLMMs-Lab/lmms-eval.git@e14b5084660fad0f3e057a8699a57b1c028e8269
+datasets>=5.1,<6
+huggingface-hub>=1.0,<2
+httpx>=0.28,<1
+Pillow>=10
+opencv-python-headless>=4.9
+numpy>=1.26.4
+filelock>=3
+google-genai>=1.50,<3
+pytest>=8
