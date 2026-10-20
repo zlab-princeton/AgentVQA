@@ -12,7 +12,7 @@
 
 # AgentVQA: A Unified Benchmark for Agentic Visual Understanding
 
-Advait Gupta, Sachin Konan, Tom Yin, Gabriel Sarch<sup>*</sup>, Zhuang Liu<sup>*</sup>
+Advait Gupta, Sachin Konan, Tom Yin, Gabriel Sarch<sup>* </sup>, Zhuang Liu<sup>*</sup>
 
 <sup>*</sup> Equal advising.
 
