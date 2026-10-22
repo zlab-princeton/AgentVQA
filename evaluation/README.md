@@ -4,7 +4,7 @@
 
 API-based evaluation built on [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), with model-specific preprocessing, optional reasoning, resumable runs, and subset, domain, and overall accuracy.
 
-Data and media are loaded from [Hugging Face](https://huggingface.co/datasets/zlab-princeton/AgentVQA); no local dataset preparation is required. Evaluation uses the `train` split without few-shot examples and supports variable option counts. Use `--revision <commit>` to select another dataset release.
+Data and media are loaded from [Hugging Face](https://huggingface.co/datasets/AgentVQA/AgentVQA); no local dataset preparation is required. Evaluation uses the `train` split without few-shot examples and supports variable option counts. Use `--revision <commit>` to select another dataset release.
 
 ## Installation
 
