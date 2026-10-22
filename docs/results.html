@@ -3,50 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AgentVQA paper results: 22 model configurations, five domains, rank correlations with general and online benchmarks, action-history analysis, and error modes.">
-  <meta name="theme-color" content="#206feb">
-  <meta property="og:title" content="AgentVQA — Results & Analysis">
-  <meta property="og:image" content="https://zlab-princeton.github.io/AgentVQA/assets/overview.png">
-  <title>Results &amp; Analysis — AgentVQA</title>
-  <link rel="canonical" href="https://zlab-princeton.github.io/AgentVQA/results.html">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261020-4">
-  <script defer src="data.js?v=20261020-2"></script>
-  <script defer src="site.js?v=20261020-2"></script>
+  <meta http-equiv="refresh" content="0; url=./#performance">
+  <link rel="canonical" href="https://zlab-princeton.github.io/AgentVQA/">
+  <title>Results — AgentVQA</title>
+  <script>window.location.replace("./" + (window.location.hash || "#performance"));</script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="nav-shell"><a class="brand" href="./" aria-label="AgentVQA home">AgentVQA</a><nav aria-label="Main navigation"><a href="./">Overview</a><a href="results.html" aria-current="page">Results</a></nav></div></header>
-  <main id="main">
-    <section class="section-shell results-hero"><h1>Results and analysis</h1><p>Model performance, rank correlations, ablations, and error analysis from the AgentVQA paper.</p><div class="section-jumps"><a href="#performance">Model performance</a><a href="#correlations">Rank correlations</a><a href="#ablations">Ablations</a><a href="#error-modes">Error modes</a></div></section>
-
-    <section id="performance" class="section-shell section-block" aria-labelledby="performance-title">
-      <div class="section-heading centered-heading"><h2 id="performance-title">Model performance</h2><p>The best overall accuracy is 58.5%. No single model leads across <span class="text-tail">all five domains.</span></p></div>
-      <div class="table-toolbar"><label for="model-search">Find a model <input type="search" id="model-search" placeholder="Search model names…" autocomplete="off"></label><a class="button small" href="assets/results.csv" download>Download CSV ↓</a></div>
-      <div class="table-scroll" tabindex="0" role="region" aria-label="Model accuracy table, scroll to see all rows and columns"><table class="results-table"><caption>Paper-reported accuracy (%). Select a column heading to sort.</caption><thead><tr><th scope="col" data-column="model"><button type="button">Model <span class="sort-mark"></span></button></th><th scope="col" data-column="0"><button type="button">Web<br>Agents <span class="sort-mark"></span></button></th><th scope="col" data-column="1"><button type="button">Egocentric<br>Videos <span class="sort-mark"></span></button></th><th scope="col" data-column="2"><button type="button">Games <span class="sort-mark"></span></button></th><th scope="col" data-column="3"><button type="button">Spatial<br>Planning <span class="sort-mark"></span></button></th><th scope="col" data-column="4"><button type="button">Robotics <span class="sort-mark"></span></button></th><th scope="col" data-column="5"><button type="button">Overall <span class="sort-mark"></span></button></th></tr></thead><tbody id="results-body"></tbody></table></div>
-      <noscript><p>Download the <a href="assets/results.csv">results CSV</a> to view every model score without JavaScript.</p></noscript>
-    </section>
-
-    <section id="correlations" class="tinted-section" aria-labelledby="correlation-title"><div class="section-shell section-block">
-      <div class="section-heading centered-heading"><h2 id="correlation-title">Rank correlations</h2><p>We compare model rankings on AgentVQA with general reasoning benchmarks and an <span class="text-tail">online agent benchmark.</span></p></div>
-      <div class="correlation-intro"><div><h3>A different ordering from general benchmarks</h3><p>The paper evaluates matched subsets with standardized prompts. Model rankings shift across MMMU-Pro, GPQA-Diamond, and ChartQA-Pro, with moderate to weak rank correlations.</p></div><div class="rho-cards"><div><span>MMMU-Pro</span><strong>0.67</strong></div><div><span>GPQA-Diamond</span><strong>0.59</strong></div><div><span>ChartQA-Pro</span><strong>0.44</strong></div><p>Spearman’s ρ · 10-model comparison</p></div></div>
-      <figure class="figure-shell"><a href="assets/correlation-general.png" target="_blank" rel="noopener"><img src="assets/correlation-general.png" alt="Rank comparisons for ten models between AgentVQA and MMMU-Pro, GPQA-Diamond, and ChartQA-Pro." loading="lazy"></a><figcaption>Rank shifts in the paper’s general-benchmark comparison. Open the figure to inspect model labels.</figcaption></figure>
-      <div class="online-heading"><h3>Strong agreement in a matched online domain</h3><div><p>AgentVQA Spatial Planning and the SpatialWorld Physical track agree strongly across their 12 shared models. This is a separate overlapping-model cohort from the main 22-configuration evaluation.</p></div><div class="online-stat"><strong>ρ = 0.895</strong><span>12 shared models · p = 8 × 10<sup>−5</sup></span></div></div>
-      <figure class="figure-shell online-figure"><a href="assets/correlation-online.png" target="_blank" rel="noopener"><img src="assets/correlation-online.png" alt="Correlations between AgentVQA domains and SpatialWorld Physical and Digital tracks, with model ranks for the matched spatial-planning comparison." loading="lazy"></a><figcaption>The paper’s online comparison. The figure rounds the primary coefficient to 0.90; the text reports 0.895. Lower correlations in other domains emphasize that the capabilities being measured matter.</figcaption></figure>
-    </div></section>
-
-    <section id="ablations" class="section-shell section-block" aria-labelledby="ablation-title">
-      <div class="section-heading"><h2 id="ablation-title">Ablations</h2></div>
-      <div class="ablation-grid"><article><h3>Action history improves web-agent decisions</h3><p>Across five models, including previous actions improves performance on AitW and MONDAY. The figure shows average accuracy with and without action history.</p><figure class="figure-shell history-figure"><a href="assets/action-history.png" target="_blank" rel="noopener"><img src="assets/action-history.png" alt="Action-history ablation: AitW rises from 38 to 42 percent, and MONDAY from 45 to 50 percent, as rounded in the paper figure." loading="lazy"></a><figcaption>Rounded values shown in the paper’s action-history figure.</figcaption></figure></article><article><h3>Reasoning gains depend on the model</h3><p>Extended reasoning improves both GPT-5.6 variants, but GLM-4.1V-9B-Thinking trails its base counterpart. Accuracy alone does not tell the full story of how models use extra computation.</p><div class="table-scroll"><table class="compact-table"><caption>Overall accuracy (%) from the main results</caption><thead><tr><th>Model</th><th>None / Base</th><th>High / Thinking</th><th>Δ (pp)</th></tr></thead><tbody><tr><th>GPT-5.6-sol</th><td>38.2</td><td>55.0</td><td class="delta">+16.8</td></tr><tr><th>GPT-5.6-luna</th><td>32.8</td><td>47.9</td><td class="delta">+15.1</td></tr><tr><th>GLM-4.1V-9B</th><td>36.3</td><td>35.4</td><td>−0.9</td></tr></tbody></table></div><p class="small-note">Δ is the difference in percentage points. The paper also documents “thinking loops” in GLM-4.1V-Thinking.</p></article></div>
-    </section>
-
-    <section id="error-modes" class="tinted-section" aria-labelledby="errors-title"><div class="section-shell section-block">
-      <div class="section-heading centered-heading"><h2 id="errors-title">Error analysis</h2><p>The paper analyzes incorrect Gemini 3.1 Pro predictions sampled approximately evenly across datasets. Error categories are <span class="text-tail">model-assisted and manually verified.</span></p></div>
-      <div class="table-scroll" tabindex="0" role="region" aria-label="Dominant error categories by domain"><table class="compact-table error-table"><thead><tr><th scope="col">Domain</th><th scope="col">Most common error</th><th scope="col">Share of analyzed errors</th></tr></thead><tbody><tr><th scope="row">Web Agents</th><td>Grounding error</td><td>78%</td></tr><tr><th scope="row">Egocentric Videos</th><td>Motion misperception</td><td>39%</td></tr><tr><th scope="row">Robotics</th><td>Spatial confusion</td><td>65%</td></tr><tr><th scope="row">Games</th><td>Visual miscomprehension</td><td>71%</td></tr><tr><th scope="row">Spatial Planning</th><td>Viewpoint gap</td><td>62%</td></tr></tbody></table></div>
-      <p class="small-note">Percentages are shares of the analyzed errors within each domain—not error rates across all questions.</p>
-      <figure class="figure-shell"><a href="assets/errors.png" target="_blank" rel="noopener"><img src="assets/errors.png" alt="Paper distribution of error categories across Web Agents, Egocentric Videos, Robotics, Games, and Spatial Planning." loading="lazy"></a><figcaption>Full error-mode distribution from the paper. The dominant failures concern perception, grounding, and state construction.</figcaption></figure>
-    </div></section>
-  </main>
-  <footer class="site-footer section-shell"><a class="brand" href="./">AgentVQA</a><p>A unified benchmark for agentic visual understanding.</p><a href="./#citation-title">Citation ↑</a></footer>
-</body>
+<body><p>Results are now on the <a href="./#performance">AgentVQA project page</a>.</p></body>
 </html>

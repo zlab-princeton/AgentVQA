@@ -18,8 +18,8 @@ h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { line-height: 1.3; font-weight: 500; }
 h1, h2, h3, figcaption { text-wrap: balance; }
 p, li, .option-text { text-wrap: pretty; }
-.results-hero > p, .correlation-intro p, .online-heading p, .ablation-grid article > p { text-wrap: balance; }
-.section-heading > p, .curation-note, .findings-list li { text-wrap: wrap; }
+.correlation-intro p, .online-heading p, .ablation-grid article > p { text-wrap: balance; }
+.section-heading > p, .curation-note { text-wrap: wrap; }
 .text-tail { display: inline-block; max-width: 100%; text-wrap: balance; }
 h2 { font-size: 31px; }
 h3 { font-size: 22px; }
@@ -28,7 +28,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { display: block; max-width: 100%; height: auto; }
 button, input { font: inherit; }
 button { cursor: pointer; }
-button, input, .button, .site-header, .stats-rail, .example-shell, .domain-controls, .site-footer, table, .small-note, figcaption { font-family: var(--sans); }
+button, input, .button, .site-header, .example-shell, .domain-controls, .site-footer, table, .small-note, figcaption { font-family: var(--sans); }
 button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 sup { font-size: .65em; line-height: 0; }
 ::selection { background: #dce9fc; }
@@ -55,14 +55,6 @@ nav a[aria-current="page"] { color: var(--blue-dark); border-bottom: 1px solid v
 .button:hover { background: var(--pale); border-color: #aaa; text-decoration: none; }
 .button svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .button.small { min-height: 34px; padding: 6px 12px; font-size: 12px; }
-.stats-rail { display: grid; grid-template-columns: repeat(5, minmax(max-content, 1fr)); overflow-x: auto; scrollbar-width: thin; border-block: 1px solid var(--line); padding-block: 20px; }
-.stats-rail > div { padding-inline: 15px; }
-.stats-rail > div + div { border-left: 1px solid var(--line); }
-.stats-rail strong, .stats-rail span, .stats-rail small { display: block; white-space: nowrap; }
-.stats-rail strong { font-size: 27px; line-height: 1.3; font-weight: 600; }
-.stats-rail span { margin-top: 5px; font-size: 11px; color: var(--muted); }
-.accuracy-stat strong { color: var(--blue); }
-.accuracy-stat small { margin-top: 3px; font-size: 10px; color: var(--muted); }
 .section-heading { margin: 0 0 28px; }
 .section-heading h2 { text-align: center; }
 .section-heading > p { margin-top: 16px; }
@@ -74,6 +66,7 @@ nav a[aria-current="page"] { color: var(--blue-dark); border-bottom: 1px solid v
 .figure-shell > a { display: block; }
 .figure-shell img { width: 100%; }
 .distribution-figure { max-width: 680px; margin: 30px auto 0; }
+.ambiguity-figure { max-width: 860px; margin-inline: auto; }
 .pipeline-figure { max-width: 860px; margin-inline: auto; }
 figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: center; }
 .paper-details { margin-top: 26px; border-top: 1px solid var(--line); }
@@ -154,18 +147,12 @@ figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height
 .game-context p { margin-top: 10px; font-size: 12px; color: var(--muted); white-space: pre-wrap; }
 .small-note { margin-top: 16px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .curation-note { margin: 24px 0 0; }
-.findings-list { margin: 0; padding-left: 22px; }
-.findings-list li + li { margin-top: 13px; }
 .citation-shell { position: relative; padding: 45px 22px 22px; background: var(--pale); border-radius: 3px; }
 .citation-shell pre { margin: 0; overflow-x: auto; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 12px; line-height: 1.8; }
 .copy-button { position: absolute; right: 12px; top: 10px; padding: 4px 8px; border: 1px solid #d6d6d6; border-radius: 3px; background: white; color: var(--muted); font-size: 11px; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-block: 24px; }
 .site-footer p, .site-footer > a:last-child { color: var(--muted); font-size: 11px; }
 .site-footer .brand { font-size: 14px; }
-.results-hero { padding-block: 35px 38px; text-align: center; }
-.results-hero h1 { font-size: 42px; }
-.results-hero > p { margin-top: 14px; }
-.section-jumps { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 25px; margin-top: 20px; font-size: 15px; }
 .table-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 18px; font-family: var(--sans); }
 .table-toolbar label { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
 input[type="search"] { min-width: 220px; padding: 8px 10px; border: 1px solid #ccc; border-radius: 3px; background: white; color: var(--text); font-size: 13px; }
@@ -230,9 +217,6 @@ caption { padding: 10px 12px; text-align: left; color: var(--muted); font-size: 
   .author-note { font-size: 11px; }
   .project-links { gap: 10px; margin-block: 22px 28px; }
   .project-links .button { padding-inline: 13px; font-size: 13px; }
-  .stats-rail > div { padding-inline: 14px; }
-  .stats-rail strong { font-size: 25px; }
-  .stats-rail span { font-size: 10px; }
   .section-block { padding-block: 36px; }
   h2 { font-size: 27px; }
   h3 { font-size: 21px; }
@@ -258,9 +242,6 @@ caption { padding: 10px 12px; text-align: left; color: var(--muted); font-size: 
   .citation-shell { padding-inline: 14px; }
   .citation-shell pre { font-size: 11px; }
   .site-footer { flex-direction: column; align-items: start; gap: 9px; }
-  .results-hero { padding-block: 30px; }
-  .results-hero h1 { font-size: 34px; }
-  .section-jumps { gap: 8px 18px; font-size: 14px; }
   .table-toolbar { gap: 10px; align-items: end; }
   .table-toolbar label { display: block; min-width: 0; flex: 1; font-size: 12px; }
   input[type="search"] { min-width: 0; width: 100%; margin-top: 6px; }
