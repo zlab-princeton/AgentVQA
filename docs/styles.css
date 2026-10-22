@@ -45,10 +45,18 @@ nav a[aria-current="page"] { color: var(--blue-dark); border-bottom: 1px solid v
 .hero { padding-top: 28px; text-align: center; }
 .hero h1 { color: var(--blue); font-size: 56px; font-weight: 600; letter-spacing: -.025em; }
 .tagline { margin: 10px auto 25px; font-size: 31px; line-height: 1.35; }
-.authors { font-size: 18px; }
-.authors span, .affiliations span { margin-inline: 9px; color: #999; }
+.authors { font-size: 18px; text-wrap: balance; }
+.authors span { margin-inline: 9px; color: #999; }
 .authors .author-name { display: inline-block; margin: 0; color: var(--text); white-space: nowrap; }
-.affiliations { margin-top: 10px; font-size: 15px; color: var(--muted); }
+.affiliations { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 32px; margin-top: 18px; font-size: 15px; }
+.institution { display: inline-flex; align-items: center; gap: 10px; color: var(--text); line-height: 1.4; }
+.institution img { flex-shrink: 0; width: auto; height: 32px; object-fit: contain; }
+.domain-name { white-space: nowrap; }
+.domain-web { color: #a71420; }
+.domain-robotics { color: #a24408; }
+.domain-ego { color: #207318; }
+.domain-games { color: #145cc1; }
+.domain-spatial { color: #7230ad; }
 .author-note { margin-top: 5px; font-size: 13px; color: var(--muted); }
 .project-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 25px 0 34px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 38px; padding: 7px 16px; border: 1px solid #ccc; border-radius: 4px; background: white; color: var(--text); font-size: 14px; line-height: 1.5; }
@@ -65,7 +73,8 @@ nav a[aria-current="page"] { color: var(--blue-dark); border-bottom: 1px solid v
 .figure-shell { margin-top: 28px; }
 .figure-shell > a { display: block; }
 .figure-shell img { width: 100%; }
-.distribution-figure { max-width: 680px; margin: 30px auto 0; }
+.overview-figure { width: 90%; margin-inline: auto; }
+.distribution-figure { max-width: 680px; margin: 48px auto 0; }
 .ambiguity-figure { max-width: 860px; margin-inline: auto; }
 .pipeline-figure { max-width: 860px; margin-inline: auto; }
 figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: center; }
@@ -212,8 +221,8 @@ caption { padding: 10px 12px; text-align: left; color: var(--muted); font-size: 
   .hero h1 { font-size: 44px; }
   .tagline { margin-top: 8px; font-size: 25px; }
   .authors { font-size: 15px; line-height: 1.9; }
-  .authors span, .affiliations span { margin-inline: 4px; }
-  .affiliations { font-size: 13px; }
+  .authors span { margin-inline: 4px; }
+  .affiliations { font-size: 13px; gap: 12px 24px; }
   .author-note { font-size: 11px; }
   .project-links { gap: 10px; margin-block: 22px 28px; }
   .project-links .button { padding-inline: 13px; font-size: 13px; }
