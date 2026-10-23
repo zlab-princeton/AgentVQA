@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://openreview.net/pdf?id=MQinK5xoYM">
+  <a href="https://arxiv.org/abs/2610.31494">
     <img alt="Paper URL" src="https://img.shields.io/static/v1?label=Paper&amp;message=PDF&amp;color=B31B1B">
   </a>
   <a href="https://huggingface.co/datasets/AgentVQA/AgentVQA">
@@ -78,11 +78,14 @@ Evaluation code, installation, API configuration, and usage instructions are in 
 If you use AgentVQA, please cite:
 
 ```bibtex
-@misc{gupta2026agentvqa,
-  title={AgentVQA: A Unified Benchmark for Agentic Visual Understanding},
-  author={Gupta, Advait and Konan, Sachin and Yin, Tom and Sarch, Gabriel and Liu, Zhuang},
-  year={2026},
-  url={https://openreview.net/pdf?id=MQinK5xoYM}
+@misc{gupta2026agentvqaunifiedbenchmarkagentic,
+      title={AgentVQA: A Unified Benchmark for Agentic Visual Understanding}, 
+      author={Advait Gupta and Sachin Konan and Tom Yin and Gabriel Sarch and Zhuang Liu},
+      year={2026},
+      eprint={2610.31494},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.31494}, 
 }
 ```
 
