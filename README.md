@@ -42,7 +42,7 @@ The five-stage pipeline combines model assistance with human judgment: candidate
 
 ## Results
 
-Across 22 model configurations evaluated in the paper, the strongest model reaches **58.5% accuracy**, and no single model leads every domain. The table below reproduces the paper's reported accuracies (%); bold indicates the best score in each column. See the [paper](https://openreview.net/pdf?id=MQinK5xoYM) for the evaluation protocol and further analysis.
+Across 22 model configurations evaluated in the paper, the strongest model reaches **58.5% accuracy**, and no single model leads every domain. The table below reproduces the paper's reported accuracies (%); bold indicates the best score in each column. See the [paper](https://arxiv.org/abs/2610.31494) for the evaluation protocol and further analysis.
 
 | Model | Web Agents | Egocentric Videos | Games | Spatial Planning | Robotics | Overall |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
